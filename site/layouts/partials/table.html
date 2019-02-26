@@ -29,7 +29,10 @@
             <td data-title="SVC Factor">{{ index $r 4 }} &nbsp;</td>
             <td data-title="MFG">{{ index $r 5 }} &nbsp;</td>
             <td data-title="Model #">{{ index $r 6 }} &nbsp;</td>
-            <td data-title="ID# / TAG#"><a href="/pdfs/{{- replace (index $r 7) "-" "" -}}.pdf">{{ index $r 7 }}</a>  &nbsp;</td>
+            {{ $id := index $r 7  }}
+            {{ $nid := replace (index $r 7) "-" "" }}
+            {{ $tid := trim $nid " "}}
+             <td data-title="ID# / TAG#"><a href="/pdfs/{{$tid}}.pdf">{{- $id -}}</a>  &nbsp;</td>  
           </tr>
         {{ end }}  
         </tbody>
