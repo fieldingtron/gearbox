@@ -4,21 +4,34 @@
 <div class="container bg-dark">
 
         <div class="row">
-                <div class="col-sm-4">
+                <div class="col-md-3 d-none d-md-block">
                         <img src="/images/gbox.png" class="img-fluid" alt="Gear Box">
-
-                    col-sm-4</div>
-                <div class="col-sm-8"> 
+                        <h5 class="h5 text-white text-center ">Call Tom Geary</h5>
+                        <h5 class="h5 text-white text-center ">+1(412)963-1111 x24 </h5>
+                        <h5 class="h6 text-white text-center ">tgeary@caseyusa.com</h5>
+                </div>
+                <div class="col-md-9"> 
                     <h1 class="text-white text-center h2">www.UsedSpeedReducers.com</h2>
                     <h2 class="h5 text-info text-center text-uppercase" >Speed Reducers / Gearboxes / Gear Reducers</h2>
                     <h2 class="h5 text-info text-center text-uppercase" >Less Motors</h2>
-
-                </div>
+                    <div class="row">
+                            <div class="col-md-4 "> <img src="/images/c-p.jpg" class="img-fluid rounded mx-auto d-block py-2" alt="C and p"></div>
+                            <div class="col-md-4 d-none d-md-block"> <img src="/images/speed-reducer-small.jpg" class="img-fluid rounded mx-auto d-block py-2" alt="Speed Reducer"></div>
+                            <div class="col-md-4 d-none d-md-block"> <img src="/images/gear-drive-small.jpg" class="img-fluid rounded mx-auto d-block py-2" alt="Gear Drive"></div>                   
+                    </div>
+                    <div class="row d-md-none">
+                            <p class="h6 text-white text-center mx-auto"> Call Tom Geary  +1(412)963-1111 x24  tgeary@caseyusa.com </p>
+                    </div>
+                </div> 
         </div>
 
-        https://elvery.net/demo/responsive-tables/
+        {{ partial "table.html" . }}
+
+
+        
+        <!-- https://elvery.net/demo/responsive-tables/
         https://medium.com/appnroll-publication/5-practical-solutions-to-make-responsive-data-tables-ff031c48b122
         https://codepen.io/alico/pen/bpLgOL
-        https://speckyboy.com/responsive-html-table-techniques/
+        https://speckyboy.com/responsive-html-table-techniques/ -->
     
 {{ end }}

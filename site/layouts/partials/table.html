@@ -1,0 +1,37 @@
+<section id=gearbox>
+
+        <div class="d-md-none ">
+                <p class="h5 text-warning text-center mx-auto"> Inventory </p>
+        </div>    
+
+<table class="table table-dark table-striped table-hover table-sm">
+        <thead>
+          <tr>
+          <th class="text-warning">RATIO</th>
+          <th class="text-warning">HP INPUT</th>
+          <th class="text-warning">INPUT RPM</th>
+          <th class="text-warning">OUTPUT</th>
+          <th class="text-warning">SVC FACTOR</th>
+          <th class="text-warning">MFG</th>
+          <th class="text-warning">Model #</th>
+          <th class="text-warning">ID# / TAG#</th>
+          </tr>
+        </thead>
+        <tbody>
+        {{ $url := "static/csv/gearbox.csv" }}
+        {{ $sep := "," }}
+        {{ range $i, $r := getCSV $sep $url }}
+          <tr>
+            <td data-title="Ratio">{{ index $r 0 }} &nbsp;</td>
+            <td data-title="HP Input">{{ index $r 1 }} &nbsp;</td>
+            <td data-title="Input RPM">{{ index $r 2 }} &nbsp;</td>
+            <td data-title="Output">{{ index $r 3 }} &nbsp;</td>
+            <td data-title="SVC Factor">{{ index $r 4 }} &nbsp;</td>
+            <td data-title="MFG">{{ index $r 5 }} &nbsp;</td>
+            <td data-title="Model #">{{ index $r 6 }} &nbsp;</td>
+            <td data-title="ID# / TAG#"><a href="/pdfs/{{- replace (index $r 7) "-" "" -}}.pdf">{{ index $r 7 }}</a>  &nbsp;</td>
+          </tr>
+        {{ end }}  
+        </tbody>
+      </table> 
+    </section>
